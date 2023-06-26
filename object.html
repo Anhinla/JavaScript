@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        <script>
+            /*
+            const product ={
+                name:"Anh",
+                age: 19,
+
+            };
+            console.log(product.name);
+            product.new = true;
+            console.log(product.new)
+            console.log(product);
+            delete product.new;
+            console.log(product)
+            */
+           const product2 = {
+                name:'shirt',
+                ['delivery time']: '1 day',
+                rating:{
+                    stars:4.5,
+                    count:97
+                },
+                fun: function func1(){
+                    console.log('ngoc anh');
+                }
+           };
+           
+           product2.fun();
+           // Convert product2 into JSON
+           tmp = JSON.stringify(product2);
+           // COnvert json into JS
+           console.log(JSON.parse(tmp));
+           
+           const obj1 = {
+                message : 'ngoc anh'
+           };
+           obj1.message = 'good job';
+           const obj4 = {
+                message : 'ngoc anh',
+                age:19
+           };
+           //const message = obj4.message;
+           // short cut for above line
+           const {message,price} = obj4;
+           console.log(message);
+           console.log(price);
+
+           const obj5 = {
+                message:message,
+                // copy value of variable message into property messge
+               // method: function func1(){
+                 //   console.log('method');
+                //}
+                method(){
+                    console.log('method')
+                }
+            };
+            obj5.method;
+        </script>
+    </body>
+</html>
